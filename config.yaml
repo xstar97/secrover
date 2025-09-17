@@ -15,3 +15,6 @@ repos:
   - url: https://github.com/xstar97/apod.git
     branch: main
     description: APOD project
+  - url: https://github.com/xstar97/go-littlelinks-generator.git
+    branch: main
+    description: GO LittleLinks Generator
