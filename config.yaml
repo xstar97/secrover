@@ -6,3 +6,9 @@ repos:
   - url: https://github.com/xstar97/cluster.git
     branch: main
     description: Talos Kubernetes Cluster
+  - url: https://github.com/xstar97/cluster-scripts.git
+    branch: main
+    description: Cluster Scripts
+  - url: https://github.com/xstar97/rompatcherjs.git
+    branch: main
+    description: RomPatcher.js
