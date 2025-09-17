@@ -1,0 +1,8 @@
+project:
+  name: Secrover
+domains:
+  - secrover.xstar97.com
+repos:
+  - url: https://github.com/xstar97/cluster.git
+    branch: main
+    description: Talos Kubernetes Cluster
