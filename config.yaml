@@ -12,3 +12,6 @@ repos:
   - url: https://github.com/xstar97/rompatcherjs.git
     branch: main
     description: RomPatcher.js
+  - url: https://github.com/xstar97/apod.git
+    branch: main
+    description: APOD project
