@@ -397,7 +397,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-09-17 09:27:00 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
+                <p><em>Audit run on 2025-09-17 09:45:07 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
             </div>
         </div>
 
@@ -425,7 +425,7 @@
                 <span class="severity-dot">
                     <span class="dot dot-moderate"></span>
                     <span>
-                        <strong>5</strong>
+                        <strong>6</strong>
                         Moderate
                     </span>
                 </span>
@@ -439,7 +439,7 @@
                 </span>
                 
             </div>
-            <span><strong>5</strong> vulnerabilities</span>
+            <span><strong>6</strong> vulnerabilities</span>
         </div>
     </section>
 
@@ -534,6 +534,112 @@
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/kube-system/cilium/app/helm-release.yaml:46,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="card project-card">
+               <div class="project-header">
+                    <h3>cluster-scripts</h3>
+                    
+                </div>
+                <p class="project-description">Cluster Scripts</p>
+
+                
+                    <div class="severity-dots mb-20">
+                        <div>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-high"></span>
+                                <span>
+                                    <strong>0</strong>
+                                    High
+                                </span>
+                            </span>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-moderate"></span>
+                                <span>
+                                    <strong>0</strong>
+                                    Moderate
+                                </span>
+                            </span>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-low"></span>
+                                <span>
+                                    <strong>0</strong>
+                                    Low
+                                </span>
+                            </span>
+                            
+                        </div>
+                        <span><strong>0</strong> vulnerabilities</span>
+                    </div>
+
+                    <p><strong>🕵️ Findings Details:</strong></p>
+                    <div class="packages-list">
+                        
+                            <p class="no-issues success mb-0">None - All clear!</p>
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="card project-card">
+               <div class="project-header">
+                    <h3>rompatcherjs</h3>
+                    
+                </div>
+                <p class="project-description">RomPatcher.js</p>
+
+                
+                    <div class="severity-dots mb-20">
+                        <div>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-high"></span>
+                                <span>
+                                    <strong>0</strong>
+                                    High
+                                </span>
+                            </span>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-moderate"></span>
+                                <span>
+                                    <strong>1</strong>
+                                    Moderate
+                                </span>
+                            </span>
+                            
+                            <span class="severity-dot">
+                                <span class="dot dot-low"></span>
+                                <span>
+                                    <strong>0</strong>
+                                    Low
+                                </span>
+                            </span>
+                            
+                        </div>
+                        <span><strong>1</strong> vulnerabilities</span>
+                    </div>
+
+                    <p><strong>🕵️ Findings Details:</strong></p>
+                    <div class="packages-list">
+                        
+                            
+                            <div class="moderate">
+                                <strong>dockerfile.security.missing-user.missing-user</strong> —
+                                By not specifying a USER, a program in the container may run as 'root'. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than 'root'.
+                                <br>
+                                <small>
+                                    File: Dockerfile:33,
                                     Severity: Moderate
                                 </small>
                             </div>
