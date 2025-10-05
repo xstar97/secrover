@@ -401,7 +401,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-10-04 03:14:50 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
+                <p><em>Audit run on 2025-10-05 03:24:19 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
             </div>
         </div>
 
@@ -493,16 +493,6 @@
                         
                             
                             <div class="moderate">
-                                <strong>generic.secrets.security.detected-jwt-token.detected-jwt-token</strong> —
-                                JWT token detected
-                                <br>
-                                <small>
-                                    File: clusters/main/kubernetes/apps/tools/mend-renovate/app/helm-release.yaml:63,
-                                    Severity: Moderate
-                                </small>
-                            </div>
-                            
-                            <div class="moderate">
                                 <strong>yaml.kubernetes.security.run-as-non-root.run-as-non-root</strong> —
                                 When running containers in Kubernetes, it's important to ensure that they  are properly secured to prevent privilege escalation attacks.  One potential vulnerability is when a container is allowed to run  applications as the root user, which could allow an attacker to gain  access to sensitive resources. To mitigate this risk, it's recommended to  add a `securityContext` to the container, with the parameter `runAsNonRoot`  set to `true`. This will ensure that the container runs as a non-root user,  limiting the damage that could be caused by any potential attacks. By  adding a `securityContext` to the container in your Kubernetes pod, you can  help to ensure that your containerized applications are more secure and  less vulnerable to privilege escalation attacks.
                                 <br>
@@ -538,6 +528,16 @@
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/kube-system/cilium/app/helm-release.yaml:46,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>generic.secrets.security.detected-jwt-token.detected-jwt-token</strong> —
+                                JWT token detected
+                                <br>
+                                <small>
+                                    File: clusters/main/kubernetes/tools/mend-renovate/app/helm-release.yaml:63,
                                     Severity: Moderate
                                 </small>
                             </div>
