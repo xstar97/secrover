@@ -170,26 +170,18 @@
             font-size: 14px;
         }
         .badge {
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 14px;
             background-color: #f8f9fa;
             color: #6c757d;
 
             &.badge-small {
-                padding: 4px 12px;
+                padding: 2px 6px;
                 font-size: 12px;
-                font-weight: 500;
-            }
-
-            &.badge-small {
-                padding: 2px 4px;
-                font-size: 12px;
-                font-weight: 500;
             }
 
             &.badge-success {
@@ -204,17 +196,9 @@
         }
         .severity-dots {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
-
-            & > div {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 15px 0;
-            }
+            align-items: center;
         }
         .severity-dot {
             display: flex;
@@ -265,10 +249,6 @@
         }
         #global-recap {
             margin-bottom: 40px;
-
-            .severity-dots {
-                padding: 15px 20px;
-            }
         }
         .overview-container {
             display: flex;
@@ -352,6 +332,9 @@
             align-items: center;
             gap: 5px;
         }
+        .d-justify-between {
+            justify-content: space-between;
+        }
         .d-wrap {
             flex-wrap: wrap;
         }
@@ -402,7 +385,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-10-15 03:25:05 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.3</em></p>
+                <p><em>Audit run on 2025-10-16 03:25:13 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.4</em></p>
             </div>
         </div>
 
@@ -416,35 +399,39 @@
         
     <section id="global-recap">
         <h1>📝 Code Report</h1>
-         <div class="card severity-dots">
-            <div>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-high"></span>
-                    <span>
-                        <strong>0</strong>
-                        High
-                    </span>
+        <div class="card">
+            <div class="d-flex d-justify-between">
+                <span class="badge badge-error">
+                    <strong>8</strong> vulnerabilities
                 </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-moderate"></span>
-                    <span>
-                        <strong>8</strong>
-                        Moderate
+                <div class="severity-dots">
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-high"></span>
+                        <span>
+                            <strong>0</strong>
+                            High
+                        </span>
                     </span>
-                </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-low"></span>
-                    <span>
-                        <strong>0</strong>
-                        Low
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-moderate"></span>
+                        <span>
+                            <strong>8</strong>
+                            Moderate
+                        </span>
                     </span>
-                </span>
-                
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-low"></span>
+                        <span>
+                            <strong>0</strong>
+                            Low
+                        </span>
+                    </span>
+                    
+                </div>
             </div>
-            <span><strong>8</strong> vulnerabilities</span>
         </div>
     </section>
 
@@ -457,8 +444,11 @@
                 <p class="project-description">Talos Kubernetes Cluster</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-error">
+                            <strong>6</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -485,7 +475,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>6</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -494,7 +483,7 @@
                             
                             <div class="moderate">
                                 <strong>yaml.kubernetes.security.run-as-non-root.run-as-non-root</strong> —
-                                When running containers in Kubernetes, it's important to ensure that they  are properly secured to prevent privilege escalation attacks.  One potential vulnerability is when a container is allowed to run  applications as the root user, which could allow an attacker to gain  access to sensitive resources. To mitigate this risk, it's recommended to  add a `securityContext` to the container, with the parameter `runAsNonRoot`  set to `true`. This will ensure that the container runs as a non-root user,  limiting the damage that could be caused by any potential attacks. By  adding a `securityContext` to the container in your Kubernetes pod, you can  help to ensure that your containerized applications are more secure and  less vulnerable to privilege escalation attacks.
+                                When running containers in Kubernetes, it&#39;s important to ensure that they  are properly secured to prevent privilege escalation attacks.  One potential vulnerability is when a container is allowed to run  applications as the root user, which could allow an attacker to gain  access to sensitive resources. To mitigate this risk, it&#39;s recommended to  add a `securityContext` to the container, with the parameter `runAsNonRoot`  set to `true`. This will ensure that the container runs as a non-root user,  limiting the damage that could be caused by any potential attacks. By  adding a `securityContext` to the container in your Kubernetes pod, you can  help to ensure that your containerized applications are more secure and  less vulnerable to privilege escalation attacks.
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:50,
@@ -504,7 +493,7 @@
                             
                             <div class="moderate">
                                 <strong>yaml.kubernetes.security.allow-privilege-escalation-no-securitycontext.allow-privilege-escalation-no-securitycontext</strong> —
-                                In Kubernetes, each pod runs in its own isolated environment with its own set of security policies. However, certain container images may contain `setuid` or `setgid` binaries that could allow an attacker to perform privilege escalation and gain access to sensitive resources. To mitigate this risk, it's recommended to add a `securityContext` to the container in the pod, with the parameter `allowPrivilegeEscalation` set to `false`. This will prevent the container from running any privileged processes and limit the impact of any potential attacks. By adding a `securityContext` to your Kubernetes pod, you can help to ensure that your containerized applications are more secure and less vulnerable to privilege escalation attacks.
+                                In Kubernetes, each pod runs in its own isolated environment with its own set of security policies. However, certain container images may contain `setuid` or `setgid` binaries that could allow an attacker to perform privilege escalation and gain access to sensitive resources. To mitigate this risk, it&#39;s recommended to add a `securityContext` to the container in the pod, with the parameter `allowPrivilegeEscalation` set to `false`. This will prevent the container from running any privileged processes and limit the impact of any potential attacks. By adding a `securityContext` to your Kubernetes pod, you can help to ensure that your containerized applications are more secure and less vulnerable to privilege escalation attacks.
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:52,
@@ -534,7 +523,7 @@
                             
                             <div class="moderate">
                                 <strong>yaml.kubernetes.security.privileged-container.privileged-container</strong> —
-                                Container or pod is running in privileged mode. This grants the container the equivalent of root capabilities on the host machine. This can lead to container escapes, privilege escalation, and other security concerns. Remove the 'privileged' key to disable this capability.
+                                Container or pod is running in privileged mode. This grants the container the equivalent of root capabilities on the host machine. This can lead to container escapes, privilege escalation, and other security concerns. Remove the &#39;privileged&#39; key to disable this capability.
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/kube-system/cilium/app/helm-release.yaml:46,
@@ -564,8 +553,11 @@
                 <p class="project-description">Cluster Scripts</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-success">
+                            <strong>0</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -592,7 +584,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>0</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -611,8 +602,11 @@
                 <p class="project-description">RomPatcher.js</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-error">
+                            <strong>1</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -639,7 +633,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>1</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -648,7 +641,7 @@
                             
                             <div class="moderate">
                                 <strong>dockerfile.security.missing-user.missing-user</strong> —
-                                By not specifying a USER, a program in the container may run as 'root'. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than 'root'.
+                                By not specifying a USER, a program in the container may run as &#39;root&#39;. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than &#39;root&#39;.
                                 <br>
                                 <small>
                                     File: Dockerfile:33,
@@ -668,8 +661,11 @@
                 <p class="project-description">APOD project</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-success">
+                            <strong>0</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -696,7 +692,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>0</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -715,8 +710,11 @@
                 <p class="project-description">GO LittleLinks Generator</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-error">
+                            <strong>1</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -743,7 +741,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>1</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
