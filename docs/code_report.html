@@ -441,7 +441,7 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-03-10 03:51 with
+                        Audit run on 2026-03-11 03:52 with
                         <span class="tooltip-link">
                             Secrover 0.8
                             <span class="tooltip">
@@ -467,7 +467,7 @@
         <div class="card">
             <div class="d-flex d-justify-between">
                 <span class="badge badge-error">
-                    <strong>7</strong> vulnerabilities
+                    <strong>5</strong> vulnerabilities
                 </span>
                 <div class="severity-dots">
                     
@@ -482,7 +482,7 @@
                     <span class="severity-dot">
                         <span class="dot dot-moderate"></span>
                         <span>
-                            <strong>7</strong>
+                            <strong>5</strong>
                             Moderate
                         </span>
                     </span>
@@ -514,7 +514,7 @@
                 
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-error">
-                            <strong>5</strong> vulnerabilities</span>
+                            <strong>3</strong> vulnerabilities</span>
                         </span>
                         <div class="severity-dots">
                             
@@ -529,7 +529,7 @@
                             <span class="severity-dot">
                                 <span class="dot dot-moderate"></span>
                                 <span>
-                                    <strong>5</strong>
+                                    <strong>3</strong>
                                     Moderate
                                 </span>
                             </span>
@@ -548,26 +548,6 @@
                     <p><strong>🕵️ Findings Details:</strong></p>
                     <div class="packages-list">
                         
-                            
-                            <div class="moderate">
-                                <strong>yaml.kubernetes.security.run-as-non-root.run-as-non-root</strong> —
-                                When running containers in Kubernetes, it&#39;s important to ensure that they  are properly secured to prevent privilege escalation attacks.  One potential vulnerability is when a container is allowed to run  applications as the root user, which could allow an attacker to gain  access to sensitive resources. To mitigate this risk, it&#39;s recommended to  add a `securityContext` to the container, with the parameter `runAsNonRoot`  set to `true`. This will ensure that the container runs as a non-root user,  limiting the damage that could be caused by any potential attacks. By  adding a `securityContext` to the container in your Kubernetes pod, you can  help to ensure that your containerized applications are more secure and  less vulnerable to privilege escalation attacks.
-                                <br>
-                                <small>
-                                    File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:50,
-                                    Severity: Moderate
-                                </small>
-                            </div>
-                            
-                            <div class="moderate">
-                                <strong>yaml.kubernetes.security.allow-privilege-escalation-no-securitycontext.allow-privilege-escalation-no-securitycontext</strong> —
-                                In Kubernetes, each pod runs in its own isolated environment with its own set of security policies. However, certain container images may contain `setuid` or `setgid` binaries that could allow an attacker to perform privilege escalation and gain access to sensitive resources. To mitigate this risk, it&#39;s recommended to add a `securityContext` to the container in the pod, with the parameter `allowPrivilegeEscalation` set to `false`. This will prevent the container from running any privileged processes and limit the impact of any potential attacks. By adding a `securityContext` to your Kubernetes pod, you can help to ensure that your containerized applications are more secure and less vulnerable to privilege escalation attacks.
-                                <br>
-                                <small>
-                                    File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:52,
-                                    Severity: Moderate
-                                </small>
-                            </div>
                             
                             <div class="moderate">
                                 <strong>generic.secrets.security.detected-bcrypt-hash.detected-bcrypt-hash</strong> —
