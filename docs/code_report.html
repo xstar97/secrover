@@ -441,7 +441,7 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-06-21 04:39 with
+                        Audit run on 2026-06-21 10:44 with
                         <span class="tooltip-link">
                             Secrover 0.11.0
                             <span class="tooltip">
@@ -467,7 +467,7 @@
         <div class="card">
             <div class="d-flex d-justify-between">
                 <span class="badge badge-error">
-                    <strong>7</strong> vulnerabilities
+                    <strong>5</strong> vulnerabilities
                 </span>
                 <div class="severity-dots">
                     
@@ -482,7 +482,7 @@
                     <span class="severity-dot">
                         <span class="dot dot-moderate"></span>
                         <span>
-                            <strong>7</strong>
+                            <strong>5</strong>
                             Moderate
                         </span>
                     </span>
@@ -504,17 +504,17 @@
         
             <div class="card project-card">
                <div class="project-header">
-                    <h3>cluster</h3>
-                    <a href="https://github.com/xstar97/cluster.git" target="_blank">
+                    <h3>home-ops</h3>
+                    <a href="https://github.com/xstar97/home-ops.git" target="_blank">
                         <img id="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MTguOTU2IiBoZWlnaHQ9IjYxOC45NTYiIHZpZXdCb3g9Ii0xMCAtNSA4MDAgODAwIiB4bWxuczp2PSJodHRwczovL3ZlY3RhLmlvL25hbm8iPjxwYXRoIGQ9Ik0zODktNXEtMjEgMC0zNiAxNWwtNzMgNzMgOTIgOTJxMTctNiAzNC0yIDE3IDQgMjkuNSAxNi41IDEyLjUgMTIuNSAxNiAyOS41IDMuNSAxNy0xLjUgMzRsODggODhxMTctNSAzNC0xLjUgMTcgMy41IDMwIDE2LjUgMTggMTggMTggNDMuNSAwIDI1LjUtMTggNDMtMTggMTcuNS00My41IDE3LjUtMjUuNSAwLTQzLjUtMTctMTMtMTQtMTYuNS0zMi0zLjUtMTggMy41LTM1bC04My04M3YyMThxOSA0IDE2IDExIDE4IDE4IDE4IDQzLjUgMCAyNS41LTE4IDQzLjUtMTggMTgtNDMuNSAxOC0yNS41IDAtNDMtMTgtMTcuNS0xOC0xNy41LTQzLjUgMC0yNS41IDE4LTQzLjUgOC04IDIwLTEzVjI4OXEtMTItNC0yMC0xMy0xNC0xMy0xNy41LTMxLjVRMzI4IDIyNiAzMzUgMjA5bC05MC05MUw1IDM1OHEtMTUgMTUtMTUgMzYuNVEtMTAgNDE2IDUgNDMxbDM0OSAzNDlxMTUgMTUgMzYuNSAxNSAyMS41IDAgMzYuNS0xNWwzNDgtMzQ4cTE1LTE1IDE1LTM2LjUgMC0yMS41LTE1LTM2LjVMNDI2IDEwUTQxMS01IDM4OS01eiIgZmlsbD0iI2Y2NGQyNiIvPjwvc3ZnPg==" alt="Git Repository">
                     </a>
                 </div>
-                <p class="project-description">Talos Kubernetes Cluster</p>
+                <p class="project-description">Home-Ops IaC GitOps</p>
 
                 
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-error">
-                            <strong>5</strong> vulnerabilities</span>
+                            <strong>3</strong> vulnerabilities</span>
                         </span>
                         <div class="severity-dots">
                             
@@ -529,7 +529,7 @@
                             <span class="severity-dot">
                                 <span class="dot dot-moderate"></span>
                                 <span>
-                                    <strong>5</strong>
+                                    <strong>3</strong>
                                     Moderate
                                 </span>
                             </span>
@@ -550,21 +550,11 @@
                         
                             
                             <div class="moderate">
-                                <strong>yaml.kubernetes.security.run-as-non-root.run-as-non-root</strong> —
-                                When running containers in Kubernetes, it&#39;s important to ensure that they  are properly secured to prevent privilege escalation attacks.  One potential vulnerability is when a container is allowed to run  applications as the root user, which could allow an attacker to gain  access to sensitive resources. To mitigate this risk, it&#39;s recommended to  add a `securityContext` to the container, with the parameter `runAsNonRoot`  set to `true`. This will ensure that the container runs as a non-root user,  limiting the damage that could be caused by any potential attacks. By  adding a `securityContext` to the container in your Kubernetes pod, you can  help to ensure that your containerized applications are more secure and  less vulnerable to privilege escalation attacks.
+                                <strong>generic.secrets.security.detected-jwt-token.detected-jwt-token</strong> —
+                                JWT token detected
                                 <br>
                                 <small>
-                                    File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:50,
-                                    Severity: Moderate
-                                </small>
-                            </div>
-                            
-                            <div class="moderate">
-                                <strong>yaml.kubernetes.security.allow-privilege-escalation-no-securitycontext.allow-privilege-escalation-no-securitycontext</strong> —
-                                In Kubernetes, each pod runs in its own isolated environment with its own set of security policies. However, certain container images may contain `setuid` or `setgid` binaries that could allow an attacker to perform privilege escalation and gain access to sensitive resources. To mitigate this risk, it&#39;s recommended to add a `securityContext` to the container in the pod, with the parameter `allowPrivilegeEscalation` set to `false`. This will prevent the container from running any privileged processes and limit the impact of any potential attacks. By adding a `securityContext` to your Kubernetes pod, you can help to ensure that your containerized applications are more secure and less vulnerable to privilege escalation attacks.
-                                <br>
-                                <small>
-                                    File: clusters/main/kubernetes/core/kyverno-policies/app/ensure-digest.yaml:52,
+                                    File: clusters/main/kubernetes/apps/mend-renovate/app/helm-release.yaml:60,
                                     Severity: Moderate
                                 </small>
                             </div>
@@ -589,68 +579,6 @@
                                 </small>
                             </div>
                             
-                            <div class="moderate">
-                                <strong>generic.secrets.security.detected-jwt-token.detected-jwt-token</strong> —
-                                JWT token detected
-                                <br>
-                                <small>
-                                    File: clusters/main/kubernetes/tools/mend-renovate/app/helm-release.yaml:65,
-                                    Severity: Moderate
-                                </small>
-                            </div>
-                            
-                        
-                    </div>
-                
-            </div>
-        
-            <div class="card project-card">
-               <div class="project-header">
-                    <h3>cluster-scripts</h3>
-                    <a href="https://github.com/xstar97/cluster-scripts.git" target="_blank">
-                        <img id="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MTguOTU2IiBoZWlnaHQ9IjYxOC45NTYiIHZpZXdCb3g9Ii0xMCAtNSA4MDAgODAwIiB4bWxuczp2PSJodHRwczovL3ZlY3RhLmlvL25hbm8iPjxwYXRoIGQ9Ik0zODktNXEtMjEgMC0zNiAxNWwtNzMgNzMgOTIgOTJxMTctNiAzNC0yIDE3IDQgMjkuNSAxNi41IDEyLjUgMTIuNSAxNiAyOS41IDMuNSAxNy0xLjUgMzRsODggODhxMTctNSAzNC0xLjUgMTcgMy41IDMwIDE2LjUgMTggMTggMTggNDMuNSAwIDI1LjUtMTggNDMtMTggMTcuNS00My41IDE3LjUtMjUuNSAwLTQzLjUtMTctMTMtMTQtMTYuNS0zMi0zLjUtMTggMy41LTM1bC04My04M3YyMThxOSA0IDE2IDExIDE4IDE4IDE4IDQzLjUgMCAyNS41LTE4IDQzLjUtMTggMTgtNDMuNSAxOC0yNS41IDAtNDMtMTgtMTcuNS0xOC0xNy41LTQzLjUgMC0yNS41IDE4LTQzLjUgOC04IDIwLTEzVjI4OXEtMTItNC0yMC0xMy0xNC0xMy0xNy41LTMxLjVRMzI4IDIyNiAzMzUgMjA5bC05MC05MUw1IDM1OHEtMTUgMTUtMTUgMzYuNVEtMTAgNDE2IDUgNDMxbDM0OSAzNDlxMTUgMTUgMzYuNSAxNSAyMS41IDAgMzYuNS0xNWwzNDgtMzQ4cTE1LTE1IDE1LTM2LjUgMC0yMS41LTE1LTM2LjVMNDI2IDEwUTQxMS01IDM4OS01eiIgZmlsbD0iI2Y2NGQyNiIvPjwvc3ZnPg==" alt="Git Repository">
-                    </a>
-                </div>
-                <p class="project-description">Cluster Scripts</p>
-
-                
-                    <div class="d-flex d-justify-between mb-20">
-                        <span class="badge badge-success">
-                            <strong>0</strong> vulnerabilities</span>
-                        </span>
-                        <div class="severity-dots">
-                            
-                            <span class="severity-dot">
-                                <span class="dot dot-high"></span>
-                                <span>
-                                    <strong>0</strong>
-                                    High
-                                </span>
-                            </span>
-                            
-                            <span class="severity-dot">
-                                <span class="dot dot-moderate"></span>
-                                <span>
-                                    <strong>0</strong>
-                                    Moderate
-                                </span>
-                            </span>
-                            
-                            <span class="severity-dot">
-                                <span class="dot dot-low"></span>
-                                <span>
-                                    <strong>0</strong>
-                                    Low
-                                </span>
-                            </span>
-                            
-                        </div>
-                    </div>
-
-                    <p><strong>🕵️ Findings Details:</strong></p>
-                    <div class="packages-list">
-                        
-                            <p class="no-issues success mb-0">None - All clear!</p>
                         
                     </div>
                 
