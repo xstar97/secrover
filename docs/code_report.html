@@ -441,7 +441,7 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-06-30 04:32 with
+                        Audit run on 2026-07-01 04:39 with
                         <span class="tooltip-link">
                             Secrover 0.11.0
                             <span class="tooltip">
@@ -467,7 +467,7 @@
         <div class="card">
             <div class="d-flex d-justify-between">
                 <span class="badge badge-error">
-                    <strong>5</strong> vulnerabilities
+                    <strong>8</strong> vulnerabilities
                 </span>
                 <div class="severity-dots">
                     
@@ -482,7 +482,7 @@
                     <span class="severity-dot">
                         <span class="dot dot-moderate"></span>
                         <span>
-                            <strong>5</strong>
+                            <strong>8</strong>
                             Moderate
                         </span>
                     </span>
@@ -596,7 +596,7 @@
                 
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-error">
-                            <strong>1</strong> vulnerability</span>
+                            <strong>4</strong> vulnerabilities</span>
                         </span>
                         <div class="severity-dots">
                             
@@ -611,7 +611,7 @@
                             <span class="severity-dot">
                                 <span class="dot dot-moderate"></span>
                                 <span>
-                                    <strong>1</strong>
+                                    <strong>4</strong>
                                     Moderate
                                 </span>
                             </span>
@@ -630,6 +630,36 @@
                     <p><strong>🕵️ Findings Details:</strong></p>
                     <div class="packages-list">
                         
+                            
+                            <div class="moderate">
+                                <strong>yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag</strong> —
+                                GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.
+                                <br>
+                                <small>
+                                    File: .github/workflows/docker-image.yml:24,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag</strong> —
+                                GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.
+                                <br>
+                                <small>
+                                    File: .github/workflows/docker-image.yml:58,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag</strong> —
+                                GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.
+                                <br>
+                                <small>
+                                    File: .github/workflows/docker-image.yml:69,
+                                    Severity: Moderate
+                                </small>
+                            </div>
                             
                             <div class="moderate">
                                 <strong>dockerfile.security.missing-user.missing-user</strong> —
