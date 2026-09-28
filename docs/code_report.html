@@ -441,7 +441,7 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-09-27 09:09 with
+                        Audit run on 2026-09-28 09:38 with
                         <span class="tooltip-link">
                             Secrover 0.12.2
                             <span class="tooltip">
@@ -467,7 +467,7 @@
         <div class="card">
             <div class="d-flex d-justify-between">
                 <span class="badge badge-error">
-                    <strong>7</strong> vulnerabilities
+                    <strong>8</strong> vulnerabilities
                 </span>
                 <div class="severity-dots">
                     
@@ -482,7 +482,7 @@
                     <span class="severity-dot">
                         <span class="dot dot-moderate"></span>
                         <span>
-                            <strong>7</strong>
+                            <strong>8</strong>
                             Moderate
                         </span>
                     </span>
@@ -514,7 +514,7 @@
                 
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-error">
-                            <strong>2</strong> vulnerabilities</span>
+                            <strong>3</strong> vulnerabilities</span>
                         </span>
                         <div class="severity-dots">
                             
@@ -529,7 +529,7 @@
                             <span class="severity-dot">
                                 <span class="dot dot-moderate"></span>
                                 <span>
-                                    <strong>2</strong>
+                                    <strong>3</strong>
                                     Moderate
                                 </span>
                             </span>
@@ -555,6 +555,16 @@
                                 <br>
                                 <small>
                                     File: clusters/main/kubernetes/kube-system/cilium/app/helm-release.yaml:46,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected</strong> —
+                                Detected a dynamic value being used with urllib. urllib supports &#39;file://&#39; schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the &#39;requests&#39; library instead.
+                                <br>
+                                <small>
+                                    File: docker/nas/apps/traefik/adguard-dns-companion.py:59,
                                     Severity: Moderate
                                 </small>
                             </div>
