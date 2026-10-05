@@ -441,12 +441,12 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-10-04 09:37 with
+                        Audit run on 2026-10-05 10:17 with
                         <span class="tooltip-link">
-                            Secrover 0.12.2
+                            Secrover 0.12.3
                             <span class="tooltip">
                                 osv-scanner: 2.3.8<br>
-                                opengrep: 1.27.1
+                                opengrep: 1.30.0
                             </span>
                         </span>
                     </em>
@@ -467,7 +467,7 @@
         <div class="card">
             <div class="d-flex d-justify-between">
                 <span class="badge badge-error">
-                    <strong>8</strong> vulnerabilities
+                    <strong>10</strong> vulnerabilities
                 </span>
                 <div class="severity-dots">
                     
@@ -482,7 +482,7 @@
                     <span class="severity-dot">
                         <span class="dot dot-moderate"></span>
                         <span>
-                            <strong>8</strong>
+                            <strong>10</strong>
                             Moderate
                         </span>
                     </span>
@@ -514,7 +514,7 @@
                 
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-error">
-                            <strong>3</strong> vulnerabilities</span>
+                            <strong>5</strong> vulnerabilities</span>
                         </span>
                         <div class="severity-dots">
                             
@@ -529,7 +529,7 @@
                             <span class="severity-dot">
                                 <span class="dot dot-moderate"></span>
                                 <span>
-                                    <strong>3</strong>
+                                    <strong>5</strong>
                                     Moderate
                                 </span>
                             </span>
@@ -564,7 +564,7 @@
                                 Detected a dynamic value being used with urllib. urllib supports &#39;file://&#39; schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the &#39;requests&#39; library instead.
                                 <br>
                                 <small>
-                                    File: docker/nas/apps/traefik/adguard-dns-companion.py:59,
+                                    File: docker/nas/apps/traefik/adguard-dns-companion.py:160,
                                     Severity: Moderate
                                 </small>
                             </div>
@@ -574,7 +574,27 @@
                                 Detected a dynamic value being used with urllib. urllib supports &#39;file://&#39; schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the &#39;requests&#39; library instead.
                                 <br>
                                 <small>
-                                    File: docker/seb/apps/infrastructure/traefik/adguard-dns-companion.py:59,
+                                    File: docker/nas/apps/traefik/adguard-dns-companion.py:1070,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected</strong> —
+                                Detected a dynamic value being used with urllib. urllib supports &#39;file://&#39; schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the &#39;requests&#39; library instead.
+                                <br>
+                                <small>
+                                    File: docker/seb/apps/infrastructure/traefik/adguard-dns-companion.py:160,
+                                    Severity: Moderate
+                                </small>
+                            </div>
+                            
+                            <div class="moderate">
+                                <strong>python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected</strong> —
+                                Detected a dynamic value being used with urllib. urllib supports &#39;file://&#39; schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the &#39;requests&#39; library instead.
+                                <br>
+                                <small>
+                                    File: docker/seb/apps/infrastructure/traefik/adguard-dns-companion.py:1070,
                                     Severity: Moderate
                                 </small>
                             </div>
